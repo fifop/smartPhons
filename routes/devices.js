@@ -59,7 +59,7 @@ router.post("/", auth, async (req, res) => {
   }
   try {
     let device = new DeviceModel(req.body);
-    device.user_id = req.tokenData._id;
+    // device.user_id = req.tokenData._id;
     await device.save();
     res.json(device)
   }

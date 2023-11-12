@@ -11,5 +11,16 @@ async function main() {
   await mongoose.connect(process.env.MONGO_URI);
   console.log("mongo connect smart local");
   
-  // use `await mongoose.connect('mongodb://user:password@localhost:27017/test');` if your database has auth enabled
 }
+
+// const mongoose = require('mongoose');
+// mongoose.connect('mongodb+srv://fifop55:852258Op@cluster0.cblnwrh.mongodb.net/')
+
+
+// const db =mongoose.connection;
+// db.on('error',console.error.bind(console,'connection error:'));
+// db.once('open',()=>{
+//   console.log('mongo connected');
+// });
+
+// module.exports=db;

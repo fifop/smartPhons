@@ -6,9 +6,9 @@ const http = require("http");
 // מודול שיודע לפתור את בעיית האבטחת של הקורס
 // שלא ניתן בברירת מחדל לשלוח מדומיין א' בקשה לדומיין ב
 const cors = require("cors");
-
 const {routesInit} = require("./routes/configRoutes");
 require("./db/mongoConnect");
+
 
 const app = express();
 
