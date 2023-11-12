@@ -1,11 +1,12 @@
 const express = require('express');
 
-require('dotenv').config({ path: './sendgrid.env' });
+require('dotenv').config();
+
+const sgMail = require('@sendgrid/mail');
+sgMail.setApiKey(process.env.SENDGRID_API_KEY);
 const crypto = require('crypto');
 const bcrypt = require('bcrypt');
 const { UserModel } = require('../models/userModel'); // ייבוא המודל של המשתמש
-const sgMail = require('@sendgrid/mail');
-sgMail.setApiKey(process.env.SENDGRID_API_KEY); // הגדרת מפתח API של SendGrid
 const router = express.Router();
 
 // פונקציה לבקשת איפוס סיסמה
